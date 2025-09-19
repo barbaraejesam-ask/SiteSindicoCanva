@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Condominial - O Síndico Técnico que Resolve</title>
+    <meta name="description" content="Gestão eficiente, técnica e transparente para condomínios de alto padrão. 20 anos de experiência com equipe técnica especializada.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #003366;
+            --text-gray: #2C2C2C;
+        }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-opensans { font-family: 'Open Sans', sans-serif; }
+        .bg-primary { background-color: var(--primary-blue); }
+        .text-primary { color: var(--primary-blue); }
+        .text-gray-custom { color: var(--text-gray); }
+        .hero-bg { 
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                        url('fundo.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+        }
+        .section-padding { padding: 80px 0; }
+    </style>
+</head>
+<body class="font-opensans">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5548999268838?text=Olá! Gostaria de saber mais sobre os serviços da Base Condominial." 
+       target="_blank" class="whatsapp-float flex items-center justify-center">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Logo Base Condominial" class="h-12">
+                    <div>
+                        <h1 class="text-2xl font-bold font-montserrat text-primary">Base Condominial</h1>
+                        <p class="text-sm text-gray-600">Síndico Técnico Profissional</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-custom hover:text-primary transition-colors font-medium">Home</a>
+                    <a href="#sobre" class="text-gray-custom hover:text-primary transition-colors font-medium">Sobre Nós</a>
+                    <a href="#servicos" class="text-gray-custom hover:text-primary transition-colors font-medium">Serviços</a>
+                    <a href="#blog" class="text-gray-custom hover:text-primary transition-colors font-medium">Blog</a>
+                    <a href="#contato" class="text-gray-custom hover:text-primary transition-colors font-medium">Contato</a>
+                    <a href="https://wa.me/5548999268838" target="_blank" 
+                       class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 transition-colors">
+                        Fale Conosco
+                    </a>
+                </div>
+                <button id="menuBtn" class="lg:hidden text-gray-custom">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#home" class="text-gray-custom hover:text-primary">Home</a>
+                    <a href="#sobre" class="text-gray-custom hover:text-primary">Sobre Nós</a>
+                    <a href="#servicos" class="text-gray-custom hover:text-primary">Serviços</a>
+                    <a href="#blog" class="text-gray-custom hover:text-primary">Blog</a>
+                    <a href="#contato" class="text-gray-custom hover:text-primary">Contato</a>
+                    <a href="https://wa.me/5548999268838" target="_blank" 
+                       class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold text-center">
+                        Fale Conosco
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home - Banner de Impacto -->
+    <section id="home" class="hero-bg text-white pt-24 section-padding">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl lg:text-6xl font-bold font-montserrat mb-6">
+                    Base Condominial<br>
+                    <span class="text-4xl lg:text-5xl">O Síndico Técnico que Resolve</span>
+                </h2>
+                <p class="text-xl lg:text-2xl mb-8 opacity-90 font-opensans">
+                    Gestão eficiente, técnica e transparente para condomínios comerciais e/ou residenciais
+                </p>
+                <button onclick="scrollToSection('contato')" 
+                        class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors font-montserrat">
+                    Agende uma reunião gratuita
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-check text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-montserrat text-primary mb-2">20 Anos</h3>
+                    <p class="text-gray-custom">de experiência comprovada</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-montserrat text-primary mb-2">Equipe Técnica</h3>
+                    <p class="text-gray-custom">Síndico + Engenheiras</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-montserrat text-primary mb-2">Emergência</h3>
+                    <p class="text-gray-custom">Atendimento disponível 24h</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-montserrat text-primary mb-2">Economia</h3>
+                    <p class="text-gray-custom">Eficiência comprovada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços em Destaque -->
+    <section class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">Nossos Serviços</h3>
+                <p class="text-xl text-gray-custom max-w-3xl mx-auto">Soluções completas e técnicas para a gestão do seu condomínio</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl card-hover">
+                    <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-building text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-3">Gestão Completa</h4>
+                    <p class="text-gray-custom mb-4">Administração profissional e técnica completa</p>
+                    <button onclick="scrollToSection('servicos')" class="text-primary font-semibold hover:underline">Saiba mais →</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-hover">
+                    <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-hard-hat text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-3">Obras e Reformas</h4>
+                    <p class="text-gray-custom mb-4">Acompanhamento técnico e redução de custos</p>
+                    <button onclick="scrollToSection('servicos')" class="text-primary font-semibold hover:underline">Saiba mais →</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-hover">
+                    <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-tools text-purple-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-3">Manutenção Preventiva</h4>
+                    <p class="text-gray-custom mb-4">Economia com previsibilidade</p>
+                    <button onclick="scrollToSection('servicos')" class="text-primary font-semibold hover:underline">Saiba mais →</button>
+                </div>
+                <div class="bg-white p-6 rounded-xl card-hover">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chalkboard-teacher text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-3">Consultoria</h4>
+                    <p class="text-gray-custom mb-4">Mentoria personalizada para síndicos</p>
+                    <button onclick="scrollToSection('servicos')" class="text-primary font-semibold hover:underline">Saiba mais →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos / Cases -->
+    <section class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">O que nossos clientes dizem</h3>
+                <div class="bg-green-100 text-green-800 px-6 py-3 rounded-lg inline-block font-semibold">
+                    +30% de economia em obras e manutenção nos últimos condomínios atendidos
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            RC
+                        </div>
+                        <div class="ml-4">
+                            <h5 class="font-bold font-montserrat">Roberto Costa</h5>
+                            <p class="text-sm text-gray-600">Edifício Platinum Tower</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-custom italic">"A Base Condominial transformou completamente a gestão do nosso edifício. Profissionalismo técnico incomparável e economia real comprovada."</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            MS
+                        </div>
+                        <div class="ml-4">
+                            <h5 class="font-bold font-montserrat">Marina Silva</h5>
+                            <p class="text-sm text-gray-600">Residencial Golden Gate</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-custom italic">"Equipe técnica excepcional! As engenheiras trouxeram soluções que nunca imaginávamos. Recomendo sem hesitar."</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
+                            AL
+                        </div>
+                        <div class="ml-4">
+                            <h5 class="font-bold font-montserrat">André Lima</h5>
+                            <p class="text-sm text-gray-600">Condomínio Royal Gardens</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-custom italic">"20 anos de experiência fazem toda a diferença. Gestão transparente e resultados que superam expectativas."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+            <!-- Quem Somos -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-4xl font-bold font-montserrat text-primary mb-6">Quem Somos</h3>
+                    <p class="text-lg text-gray-custom mb-6">
+                        Com 20 anos de experiência em gestão condominial, a Base Condominial nasceu da necessidade de oferecer um serviço técnico e diferenciado para condomínios de alto padrão.
+                    </p>
+                    <p class="text-lg text-gray-custom mb-6">
+                        Nossa trajetória é marcada pela busca constante da excelência, transparência total e resultados mensuráveis. Acreditamos que a gestão condominial deve ser técnica, eficiente e focada na valorização patrimonial.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span class="text-gray-custom">Certificação em Administração Condominial</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span class="text-gray-custom">Especialização em Gestão de Obras</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span class="text-gray-custom">Formação Continuada em Direito Condominial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="w-64 h-64 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="Luciano.png" 
+                             alt="Fundador & Síndico Profissional" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-64 h-64 bg-gray-300 rounded-full flex items-center justify-center\'><i class=\'fas fa-user-tie text-6xl text-gray-500\'></i></div>';">
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat">Luciano - Fundador & Síndico Profissional</h4>
+                    <p class="text-gray-600">20 anos transformando a gestão condominial</p>
+                </div>
+            </div>
+
+            <!-- Nossa Equipe -->
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">Nossa Equipe Técnica</h3>
+                <p class="text-xl text-gray-custom">Profissionais especializados para resultados excepcionais</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-xl text-center card-hover">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="Beatriz.jpeg" 
+                             alt="Engenheira Civil" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center\'><i class=\'fas fa-hard-hat text-4xl text-gray-500\'></i></div>';">
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-2">Beatriz - Eng. Civil(UFSC)| Administração (UDESC) </h4>
+                    <p class="text-gray-custom">Formada em Engenharia Civil pela UFSC, com especialização em Engenharia de Avaliações e Perícias e atualmente graduanda em Administração Empresarial na UDESC. Possui 5 anos de experiência como orçamentista, com forte atuação em análise de custos, planejamento e controle orçamentário.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl text-center card-hover">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden">
+                        <img src="Barbara.jpeg" 
+                             alt="Engenheira Sanitarista e Ambiental" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center\'><i class=\'fas fa-leaf text-4xl text-gray-500\'></i></div>';">
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat mb-2">Bárbara - Eng. Sanitarista e Ambiental (UFSC)</h4>
+                    <p class="text-gray-custom"> Formada com honra ao mérito e especialista em Gestão Ambiental, com formação em Perícia e Auditoria Ambiental. Atualmente mestranda na UFSC, possui 4 anos de experiência em consultorias e gestão de projetos, com ênfase na implementação de práticas sustentáveis, economia de recursos e conformidade ambiental.</p>
+                </div>
+            </div>
+
+            <!-- Missão, Visão, Valores -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-target text-primary text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat text-primary mb-4">Missão</h4>
+                    <p class="text-gray-custom">Gerar eficiência, economia e valorização patrimonial através de gestão técnica e transparente.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-eye text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat text-primary mb-4">Visão</h4>
+                    <p class="text-gray-custom">Ser referência nacional em gestão técnica de condomínios de alto padrão.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold font-montserrat text-primary mb-4">Valores</h4>
+                    <p class="text-gray-custom">Técnica, transparência, inovação e proximidade com nossos clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Detalhados -->
+    <section id="servicos" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">Nossos Serviços</h3>
+                <p class="text-xl text-gray-custom max-w-3xl mx-auto">Soluções técnicas completas para condomínios de alto padrão</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Gestão Completa -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-3xl font-bold font-montserrat text-primary mb-6">Gestão Completa de Condomínios</h4>
+                        <p class="text-lg text-gray-custom mb-6">
+                            Administração profissional com abordagem técnica diferenciada. Nossa equipe de engenheiras garante decisões embasadas tecnicamente, resultando em economia real e valorização patrimonial.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Gestão financeira transparente</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Relatórios técnicos mensais</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Atendimento emergencial 24h</span>
+                            </li>
+                        </ul>
+                        <button onclick="scrollToSection('contato')" 
+                                class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                            Solicite proposta
+                        </button>
+                    </div>
+                    <div class="bg-gray-100 h-64 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" 
+                             alt="Gestão Completa de Condomínios" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-100 h-64 rounded-xl flex items-center justify-center\'><i class=\'fas fa-building text-6xl text-gray-400\'></i></div>';">
+                    </div>
+                </div>
+
+                <!-- Obras e Reformas -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-100 h-64 rounded-xl overflow-hidden order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" 
+                             alt="Gestão de Obras e Reformas" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-100 h-64 rounded-xl flex items-center justify-center\'><i class=\'fas fa-hard-hat text-6xl text-gray-400\'></i></div>';">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h4 class="text-3xl font-bold font-montserrat text-primary mb-6">Gestão de Obras e Reformas</h4>
+                        <p class="text-lg text-gray-custom mb-6">
+                            Acompanhamento técnico especializado com nossa engenheira civil. Redução significativa de custos, garantia de qualidade e entrega no prazo estabelecido.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Análise técnica de projetos</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Fiscalização de obras</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Negociação com fornecedores</span>
+                            </li>
+                        </ul>
+                        <button onclick="scrollToSection('contato')" 
+                                class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                            Saiba mais
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Manutenção Preventiva -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h4 class="text-3xl font-bold font-montserrat text-primary mb-6">Planejamento de Manutenção Preventiva</h4>
+                        <p class="text-lg text-gray-custom mb-6">
+                            Economia através da previsibilidade. Nosso planejamento técnico evita gastos emergenciais e prolonga a vida útil dos equipamentos e estruturas.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Cronograma de manutenções</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Inspeções técnicas regulares</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Orçamento anual planejado</span>
+                            </li>
+                        </ul>
+                        <button onclick="scrollToSection('contato')" 
+                                class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                            Agende diagnóstico
+                        </button>
+                    </div>
+                    <div class="bg-gray-100 h-64 rounded-xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop" 
+                             alt="Manutenção Preventiva" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-100 h-64 rounded-xl flex items-center justify-center\'><i class=\'fas fa-tools text-6xl text-gray-400\'></i></div>';">
+                    </div>
+                </div>
+
+                <!-- Consultoria -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-100 h-64 rounded-xl overflow-hidden order-2 lg:order-1">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" 
+                             alt="Consultoria e Mentoria" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-100 h-64 rounded-xl flex items-center justify-center\'><i class=\'fas fa-chalkboard-teacher text-6xl text-gray-400\'></i></div>';">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <h4 class="text-3xl font-bold font-montserrat text-primary mb-6">Consultoria e Mentoria para Síndicos</h4>
+                        <p class="text-lg text-gray-custom mb-6">
+                            Planos de mentoria personalizada para síndicos que desejam aprimorar sua gestão. Compartilhamos nossa experiência de 20 anos de forma estruturada e prática.
+                        </p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Mentoria individual</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Treinamentos específicos</span>
+                            </li>
+                            <li class="flex items-center space-x-3">
+                                <i class="fas fa-check text-green-500"></i>
+                                <span>Material didático exclusivo</span>
+                            </li>
+                        </ul>
+                        <button onclick="scrollToSection('contato')" 
+                                class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                            Conheça os planos de mentoria
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="section-padding bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">Blog</h3>
+                <p class="text-xl text-gray-custom">Conteúdo técnico para síndicos e administradores</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <article class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=400&h=300&fit=crop" 
+                             alt="Erros em obras de condomínios" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-200 h-48 flex items-center justify-center\'><i class=\'fas fa-exclamation-triangle text-4xl text-gray-400\'></i></div>';">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold font-montserrat mb-3">7 erros que fazem condomínios perderem dinheiro em obras</h4>
+                        <p class="text-gray-custom mb-4">Descubra os principais erros técnicos que podem custar caro ao seu condomínio e como evitá-los com planejamento adequado.</p>
+                        <button class="text-primary font-semibold hover:underline">Leia mais →</button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop" 
+                             alt="Planejamento de manutenção" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-200 h-48 flex items-center justify-center\'><i class=\'fas fa-calendar-alt text-4xl text-gray-400\'></i></div>';">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold font-montserrat mb-3">Como planejar a manutenção preventiva sem estourar o orçamento</h4>
+                        <p class="text-gray-custom mb-4">Estratégias técnicas para criar um cronograma de manutenção eficiente e economicamente viável.</p>
+                        <button class="text-primary font-semibold hover:underline">Leia mais →</button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D12AQFYfhadnNZNRQ/article-cover_image-shrink_600_2000/B4DZa29kBlG4AU-/0/1746826315087?e=2147483647&v=beta&t=5ONT5GTWh1DrLBk3UgeIxW5ze564pWy0Y-0S7wPHeRE" 
+                             alt="Checklist para síndicos" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src=''; this.alt='Imagem não disponível'; this.style.display='none'; this.parentElement.innerHTML='<div class=\'bg-gray-200 h-48 flex items-center justify-center\'><i class=\'fas fa-clipboard-check text-4xl text-gray-400\'></i></div>';">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold font-montserrat mb-3">Checklist essencial para síndicos de alto padrão</h4>
+                        <p class="text-gray-custom mb-4">Lista completa de verificações mensais para manter seu condomínio sempre em perfeito estado.</p>
+                        <button class="text-primary font-semibold hover:underline">Leia mais →</button>
+                    </div>
+                </article>
+            </div>
+            <div class="text-center bg-white p-8 rounded-xl">
+                <h4 class="text-2xl font-bold font-montserrat text-primary mb-4">Quer aplicar essas soluções no seu condomínio?</h4>
+                <button onclick="scrollToSection('contato')" 
+                        class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors">
+                    Fale com a Base Condominial
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section-padding bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold font-montserrat text-primary mb-4">Entre em Contato</h3>
+                <p class="text-xl text-gray-custom">Solicite um orçamento personalizado para seu condomínio</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Informações de Contato -->
+                <div>
+                    <div class="space-y-8 mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold font-montserrat text-lg">WhatsApp</h5>
+                                <p class="text-gray-custom">(48) 99926-8838</p>
+                                <a href="https://wa.me/5548999268838" target="_blank" 
+                                   class="text-green-600 font-semibold hover:underline">Falar agora →</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-envelope text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold font-montserrat text-lg">E-mail</h5>
+                                <p class="text-gray-custom">sindicos.foaldor@gmail.com</p>
+                                <a href="mailto:sindicos.foaldor@gmail.com" 
+                                   class="text-primary font-semibold hover:underline">Enviar e-mail →</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-purple-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold font-montserrat text-lg">Região de Atuação</h5>
+                                <p class="text-gray-custom">Atendemos condomínios residenciais e comerciais na Grande Florianópolis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nome Completo *</label>
+                            <input type="text" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">E-mail *</label>
+                            <input type="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Telefone/WhatsApp *</label>
+                            <input type="tel" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Nome do Condomínio</label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Mensagem</label>
+                            <textarea rows="4" 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
+                                      placeholder="Descreva suas necessidades e como podemos ajudar..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-primary text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-800 transition-colors font-montserrat">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada Final -->
+    <section class="bg-primary text-white section-padding">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl font-bold font-montserrat mb-6">Pronto para transformar a gestão do seu condomínio?</h3>
+            <p class="text-xl mb-8 opacity-90">Junte-se aos condomínios que já economizam com nossa gestão técnica especializada</p>
+            <a href="https://wa.me/5548999268838?text=Olá! Quero transformar a gestão do meu condomínio com a Base Condominial." 
+               target="_blank"
+               class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors font-montserrat inline-block">
+                Fale com a Base Condominial agora
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="logo.png" alt="Logo Base Condominial" class="h-12">
+                        <span class="text-xl font-bold font-montserrat">Base Condominial</span>
+                    </div>
+                    <p class="text-gray-400">O síndico técnico que resolve. Gestão profissional para condomínios comerciais e/ou residenciais.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold font-montserrat mb-4">Serviços</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#servicos" class="hover:text-white">Gestão Completa</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Obras e Reformas</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Manutenção Preventiva</a></li>
+                        <li><a href="#servicos" class="hover:text-white">Consultoria</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold font-montserrat mb-4">Empresa</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#sobre" class="hover:text-white">Sobre Nós</a></li>
+                        <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="#contato" class="hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold font-montserrat mb-4">Contato</h5>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>(48) 99926-8838</li>
+                        <li>sindicos.foaldor@gmail.com</li>
+                        <li>São José-SC</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 mb-4">&copy; 2025 Base Condominial. Todos os direitos reservados.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Termos de Uso</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">LGPD</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Contact form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            
+            button.textContent = 'Mensagem Enviada com Sucesso!';
+            button.classList.remove('bg-primary', 'hover:bg-blue-800');
+            button.classList.add('bg-green-600');
+            
+            this.reset();
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('bg-green-600');
+                button.classList.add('bg-primary', 'hover:bg-blue-800');
+            }, 3000);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+
+        // Mobile menu close on link click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9814ab03b73b196f',t:'MTc1ODIzODYxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
